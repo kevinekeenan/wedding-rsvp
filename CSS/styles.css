@@ -1,0 +1,136 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/*Image styling*/
+
+#indexPhoto {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    object-fit: cover;
+    position: relative;
+    object-position: 47% center;
+}
+
+
+/*Index ID styling*/
+
+#indexH1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(241, 240, 238, 0.75);
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    padding: .5em 0;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #000;
+}
+
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.pinyon-script-regular {
+    font-family: "Pinyon Script", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+    
+
+span {
+    text-align: center;
+    
+}
+
+
+#mainMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-content: center;
+    list-style: none;
+    font-size: 2em;
+}
+
+#mainMenu li {
+    text-align: center;
+    display: inline-block;
+}
+
+#mainMenu a {
+    color:black;
+    text-decoration: none;
+    background-color: rgba(241, 240, 238, 0.75);
+    width: 40vw;
+    display: inline-block;
+    margin: 0.5em 2em;
+    padding: 0 .5em;
+    border-radius: 25px;
+}
+
+/* Form ID Styling */
+
+#attend {
+    display: none;
+}
+
+/* General Rules */
+body{
+    background-color: #2C3419;
+    color: #F1F0EE;
+    text-align: center;
+}
+
+main {
+    padding: 0 2em;
+}
+
+header img {
+    height: 20vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 50% 80%;
+    
+}
+
+h1 {
+    margin-bottom: .75em;
+    border-bottom: solid;
+}
+
+h2, h3 {
+    padding-top: 1em;
+    padding-bottom: .5em;
+}
+
+h3 {
+    border-top: solid;
+    border-bottom: solid;
+    font-size: 1.75em;
+}
+
+li {
+    list-style-type: circle;
+    text-align: left;
+    margin: auto 3em;
+}
+
+/* Class Styling */
+
+.question {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: .75em auto;
+}

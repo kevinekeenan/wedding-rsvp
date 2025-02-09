@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+    <title>Template</title>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\kevin\OneDrive\Desktop\WeddingFiles\RSVP Site\Images\FamilyField.JPG" alt="Kevin, Asia, and Kali in a field"/>
+        <h1>Kevin & Asia</h1>
+    </header>
+    <main>
+        <h2>RSVP</h2>
+        <p>Please fill out the following information</p>
+        <form>
+            <fieldset>
+                <legend>Please enter your full name</legend> 
+                    <input id="fullName" name="fullName" type="text" required/>  
+            </fieldset>
+            <fieldset id="attend">
+                <label for="attend">Will you be in attendance?
+                    <input id="attend" name="attend" type="radio" required/>
+                </label>
+            </fieldset>
+            <fieldset id="plusOne">
+                <legend>Who in your party will be attending?</legend>
+                <!--The div tag below will need JavaScript to create checkboxes for the members of the invited party-->
+                <div></div>
+            </fieldset>
+            <fieldset id="dietQuestion">
+                <legend>Please share any dietary restrictions or allergies</legend>
+                <textarea cols="30" rows="4"></textarea>
+            </fieldset>
+            <fieldset id="photoQuestion">
+                <legend>If you would like to receive photos from our wedding afterward, please provide your preferred phone number or email address</legend>
+                <input type="text" name="photoContact">
+            </fieldset>
+        </form>
+    </main>
+    <script type="module" src="../JavaScript/form.js"></script>
+</body>
+</html>
