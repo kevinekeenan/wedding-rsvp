@@ -86,6 +86,22 @@ span {
     display: none;
 }
 
+#whoInParty {
+    display: none;
+}
+
+#dietQuestion {
+    display: none;
+}
+
+#photoQuestion {
+    display: none;
+}
+
+#submit {
+    display: none;
+}
+
 /* General Rules */
 body{
     background-color: #2C3419;
@@ -95,6 +111,7 @@ body{
 
 main {
     padding: 0 2em;
+    height: 100vh;
 }
 
 header img {

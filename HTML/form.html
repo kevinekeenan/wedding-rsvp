@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <img src="C:\Users\kevin\OneDrive\Desktop\WeddingFiles\RSVP Site\Images\FamilyField.JPG" alt="Kevin, Asia, and Kali in a field"/>
+        <img src="\RSVP Site\Images\FamilyField.JPG" alt="Kevin, Asia, and Kali in a field"/>
         <h1>Kevin & Asia</h1>
     </header>
     <main>
@@ -23,12 +23,19 @@
                     <input id="fullName" name="fullName" type="text" required/>  
             </fieldset>
             <fieldset id="attend">
-                <label for="attend">Will you be in attendance?
-                    <input id="attend" name="attend" type="radio" required/>
+                <legend>Will you be attending?</legend>
+                <label for="attendInput">
+                    <input id="attendYes" name="attend" type="radio" value="yes" required/>
+                    Yes
+                </label>
+                <br/>
+                <label for="attendNo">
+                    <input id="attendNo" name="attend" type="radio" value="no" required/>
+                    No
                 </label>
             </fieldset>
-            <fieldset id="plusOne">
-                <legend>Who in your party will be attending?</legend>
+            <fieldset id="whoInParty">
+                <legend for="whoInPartyInput">Who in your party will be attending?</legend>
                 <!--The div tag below will need JavaScript to create checkboxes for the members of the invited party-->
                 <div></div>
             </fieldset>
@@ -40,6 +47,7 @@
                 <legend>If you would like to receive photos from our wedding afterward, please provide your preferred phone number or email address</legend>
                 <input type="text" name="photoContact">
             </fieldset>
+            <input id="submit" type="submit" name="submit" value="Submit"/>
         </form>
     </main>
     <script type="module" src="../JavaScript/form.js"></script>
