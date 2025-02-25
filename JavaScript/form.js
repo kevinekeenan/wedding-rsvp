@@ -64,7 +64,10 @@ let nameField = document.getElementById('fullName');
 const attend = document.getElementById('attend');
 const attendInputs = document.querySelectorAll('input[name="attend"]')
 const whoInParty = document.getElementById('whoInParty');
+const invitedGuests = document.getElementById('invitedGuests');
 const submit = document.getElementById('submit');
+const dietQuestion = document.getElementById('dietQuestion');
+const photoQuestion = document.getElementById('photoQuestion');
 let guestParty;
 
 const checkName = () => {
@@ -98,6 +101,7 @@ const checkAttendance = () => {
         if (selectedOption.value === 'yes') {
             whoInParty.style.display = "block";
             submit.style.display = "none"; // Hide submit button until party is confirmed
+            generateGuestCheckboxes(guestParty);
         } else {
             whoInParty.style.display = "none";
             submit.style.display = "block"; // Show submit button if "No" is selected
@@ -105,8 +109,39 @@ const checkAttendance = () => {
     }
 }
 
+const generateGuestCheckboxes = (guestParty) => {
+    invitedGuests.innerHTML = ""; // Clear existing checkboxes
+
+    guests[guestParty].guest.forEach(guestName => {
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = "guest";
+        checkbox.value = guestName;
+        checkbox.id = guestName.replace(/\s+/g, "-");
+
+        const label = document.createElement("label");
+        label.htmlFor = checkbox.id;
+        label.textContent = capitalizeWords(guestName);
+
+        invitedGuests.appendChild(checkbox);
+        invitedGuests.appendChild(label);
+        invitedGuests.appendChild(document.createElement("br")); // Line break for better spacing
+    });
+};
+
+function capitalizeWords(name) {
+    return name.replace(/\b\w/g, char => char.toUpperCase());
+}
+
+const showDietAndPhoto = () => {
+    dietQuestion.style.display = 'block';
+    photoQuestion.style.display = 'block';
+    submit.style.display = "block";
+}
+
 // Attach event listener to check the name as user types
 nameField.addEventListener('input', checkName);
 attendInputs.forEach(radio => {
     radio.addEventListener('change', checkAttendance);
 });
+invitedGuests.addEventListener('click', showDietAndPhoto);
